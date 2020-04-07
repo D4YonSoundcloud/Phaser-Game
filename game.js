@@ -1,4 +1,23 @@
-
 window.onload = function() {
-    var game = new Phaser.Game();
-}
+  var game = null;
+};
+
+var gameSettings = {
+  playerSpeed: 200
+};
+
+var config = {
+  width: 256,
+  height: 272,
+  backgroundColor: 0x00000,
+  scene: [Scene1, Scene2],
+  pixelArt: true,
+  physics: {
+    default: "arcade",
+    arcade: {
+      debug: false
+    }
+  }
+};
+
+game = new Phaser.Game(config);
